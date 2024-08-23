@@ -13,13 +13,19 @@ export class AuthService {
 private currentUserSource = new ReplaySubject<User>(1);
 public currentUser$ = this.currentUserSource.asObservable();
 
-baseUrl = environment.apiURL + 'api/Auth/';
+baseUrl = environment.apiURL + 'api/usuario/';
 constructor(private http: HttpClient) { }
 
-public login(model: any): Observable<string> {
-  return this.http.post(this.baseUrl + 'login', model, {
-    responseType: 'text'
-  });
+public login(model: any): Observable<void> {
+  return this.http.post<User>(this.baseUrl + 'autenticar', model).pipe(
+    take(1),
+    map((response: User) => {
+      const user = response;
+      if (user){
+        this.setCurrentUser(user);
+      }
+    })
+  );
 }
 
 getUser(): Observable<UserUpdate>{
@@ -36,7 +42,7 @@ updateUser(model: UserUpdate): Observable<void>{
 }
 
 public register(model: any): Observable<void> {
-  return this.http.post<User>(this.baseUrl + 'register', model).pipe(
+  return this.http.post<User>(this.baseUrl + 'criar-conta', model).pipe(
     take(1),
     map((response: User) => {
       const user = response;

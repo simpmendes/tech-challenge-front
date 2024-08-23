@@ -1,8 +1,8 @@
 export interface User {
-    userName: string;
-    EmailId: string;
-    Password: string;
-    primeiroNome: string;
-    ultimoNome: string;
-    token: string;
+    id: number;
+    nome: string;
+    email: string;
+    senha: string;
+    accessToken: string;
+    mensagem: string;
   }
