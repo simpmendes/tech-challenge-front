@@ -28,7 +28,7 @@ public login(): void {
   
   this.authService.login(this.model).subscribe(
     () => { 
-      //this.router.navigateByUrl('/dashboard');
+      this.router.navigateByUrl('/portfolio/tela-inicial');
       this.toastr.success('Deu Certo', 'Retorno'); 
     },
     (error: any) => {
@@ -47,7 +47,7 @@ register(): void{
   this.authService.register(this.user).subscribe(
     () => {
       this.toastr.success('Deu Certo', 'Retorno');
-      //this.router.navigateByUrl('/dashboard')
+      this.router.navigateByUrl('/portfolio/tela-inicial');
     },
     (error: any) => this.toastr.error(error.error)
   );

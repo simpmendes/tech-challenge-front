@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
+import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 
 
@@ -9,6 +10,7 @@ import { TelaInicialComponent } from './tela-inicial/tela-inicial.component';
     TelaInicialComponent
   ],
   imports: [
+    PortfolioRoutingModule,
     CommonModule
   ]
 })
