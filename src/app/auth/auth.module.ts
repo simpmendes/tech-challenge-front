@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { ToastrModule } from 'ngx-toastr';
-import { JwtInterceptor } from './interceptors/jwt.interceptor';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +22,6 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
     CommonModule,
     AuthRoutingModule,
     FormsModule,
-    HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
@@ -35,9 +34,6 @@ import { JwtInterceptor } from './interceptors/jwt.interceptor';
       preventDuplicates: true,
     }),
   
-  ],
-  providers: [AuthService,
-    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
   ]
 })
 export class AuthModule { }

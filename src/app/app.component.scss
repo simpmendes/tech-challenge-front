@@ -1,0 +1,19 @@
+.custom-toolbar {
+    
+    
+	overflow: hidden;
+	background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    color: white;  // Define a cor do texto
+
+  // Estilo para os botões e ícones
+  .mat-button, .mat-icon-button {
+    color: white;  // Substitua pela cor desejada dos ícones e texto dos botões
+  }
+  .mat-icon {
+    color: white;  // Substitua pela cor desejada dos ícones
+  }
+    .spacer {
+        flex: 1 1 auto;
+      }
+
+}
