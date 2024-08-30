@@ -1,0 +1,17 @@
+<div class="portfolio-detalhes-container">
+    <mat-toolbar>
+      <span>Ativos do Portfólio: {{ portfolio.nome }}</span>
+    </mat-toolbar>
+    <div class="ativos-container">
+      <!-- Card para cada ativo do portfólio -->
+      <mat-card *ngFor="let ativo of portfolio.ativos" class="ativo-card">
+        <mat-card-header>
+          <mat-card-title>{{ ativo.sigla }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <p>Tipo: {{ ativo.ativoTipoNome }}</p>
+          <!-- Exibir outras propriedades do ativo aqui -->
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div>

@@ -29,7 +29,7 @@ public login(): void {
   this.authService.login(this.model).subscribe(
     () => { 
       this.router.navigateByUrl('/portfolio/tela-inicial');
-      this.toastr.success('Deu Certo', 'Retorno'); 
+      this.toastr.success('Usuário Autenticado', 'Retorno'); 
     },
     (error: any) => {
       if (error.status === 400) {

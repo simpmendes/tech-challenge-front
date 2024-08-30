@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PortfolioResponseModel } from '../models/portfolio-response.model';
 import { ServicePortfolioService } from '../service-portfolio.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tela-inicial',
@@ -11,7 +12,8 @@ export class TelaInicialComponent {
   portfolios: PortfolioResponseModel[] = [];
   selectedPortfolio: PortfolioResponseModel | null = null;
 
-  constructor(private portfolioService: ServicePortfolioService) {}
+  constructor(private portfolioService: ServicePortfolioService,
+              private router: Router) {}
 
   ngOnInit(): void {
     this.loadPortfolios();
@@ -26,6 +28,11 @@ export class TelaInicialComponent {
         console.error('Erro ao carregar portfolios:', error);
       }
     );
+  }
+
+  // Método para navegar até a tela de detalhes do portfólio
+  goToPortfolioDetails(portfolio: PortfolioResponseModel): void {
+    this.router.navigate(['portfolio/portfolio-details'], { state: { portfolio } });
   }
 
   selectPortfolio(portfolio: PortfolioResponseModel): void {
