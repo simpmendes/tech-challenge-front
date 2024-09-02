@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Adicionar Novo Portfólio</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Nome do Portfólio</mat-label>
+    <input matInput [(ngModel)]="portfolioData.nome" />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Descrição</mat-label>
+    <textarea matInput [(ngModel)]="portfolioData.descricao"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Cancelar</button>
+  <button mat-button (click)="onAddPortfolio()">Adicionar</button>
+</div>

@@ -3,6 +3,17 @@
   <mat-toolbar>
     <span>Portfolios</span>
   </mat-toolbar>
+  <!-- Card fixo para adicionar novo portfólio -->
+  <mat-card class="portfolio-card add-portfolio-card" (click)="openAddPortfolioModal()">
+    <mat-card-header>
+      <mat-card-title>
+        Adicionar Portfolio
+      </mat-card-title>
+      <mat-card-content>
+        <mat-icon>add</mat-icon>
+      </mat-card-content>
+    </mat-card-header>
+  </mat-card>
     <!-- Card para cada portfólio -->
   <mat-card *ngFor="let portfolio of portfolios" class="portfolio-card" (click)="goToPortfolioDetails(portfolio)">
     <mat-card-header>
