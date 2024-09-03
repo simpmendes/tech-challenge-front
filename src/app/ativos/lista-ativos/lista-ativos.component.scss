@@ -1,0 +1,18 @@
+.ativos-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .ativo-card {
+    width: 300px;
+    margin-bottom: 16px;
+    cursor: pointer;
+  }
+  
+  mat-toolbar {
+    background-color: white; /* Define o fundo branco */
+    color: black; /* Ajuste a cor do texto se necessário */
+    border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior, opcional */
+  }
+  
