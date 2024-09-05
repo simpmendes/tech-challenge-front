@@ -12,5 +12,9 @@
       <mat-card-content>
         <p>Tipo: {{ ativo.ativoTipo.nome }}</p>
       </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="openTransactionModal(ativo, 'comprar')">Comprar</button>
+        <button mat-button color="warn" (click)="openTransactionModal(ativo, 'vender')">Vender</button>
+      </mat-card-actions>
     </mat-card>
   </div>
