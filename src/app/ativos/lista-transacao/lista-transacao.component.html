@@ -1,0 +1,41 @@
+<div class="transacoes-list-container">
+    <mat-toolbar>
+      <span>Transações</span>
+    </mat-toolbar>
+    
+    <mat-table [dataSource]="transacoes" class="mat-elevation-z8">
+  
+      <!-- Data da Transação Column -->
+      <ng-container matColumnDef="dataTransacao">
+        <mat-header-cell *matHeaderCellDef> Data </mat-header-cell>
+        <mat-cell *matCellDef="let transacao"> {{ transacao.dataTransacao | date:'dd/MM/yyyy, hh:mm a' }} </mat-cell>
+      </ng-container>
+  
+      <!-- Tipo da Transação Column -->
+      <ng-container matColumnDef="nomeTipoTransacao">
+        <mat-header-cell *matHeaderCellDef> Tipo </mat-header-cell>
+        <mat-cell *matCellDef="let transacao"> {{ transacao.nomeTipoTransacao }} </mat-cell>
+      </ng-container>
+  
+      <!-- Ativo Column -->
+      <ng-container matColumnDef="ativo">
+        <mat-header-cell *matHeaderCellDef> Ativo </mat-header-cell>
+        <mat-cell *matCellDef="let transacao"> {{ transacao.ativo.nome }} ({{ transacao.ativo.sigla }}) </mat-cell>
+      </ng-container>
+  
+      <!-- Quantidade Column -->
+      <ng-container matColumnDef="quantidade">
+        <mat-header-cell *matHeaderCellDef> Quantidade </mat-header-cell>
+        <mat-cell *matCellDef="let transacao"> {{ transacao.quantidade }} </mat-cell>
+      </ng-container>
+  
+      <!-- Preço Column -->
+      <ng-container matColumnDef="preco">
+        <mat-header-cell *matHeaderCellDef> Preço </mat-header-cell>
+        <mat-cell *matCellDef="let transacao"> {{ transacao.preco | currency:'BRL':'symbol':'1.2-2' }} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </div>

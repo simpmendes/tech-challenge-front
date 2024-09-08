@@ -21,7 +21,6 @@ export class AppComponent {
     });
   }
   logout() {
-    // Sua lógica de logout aqui
     this.router.navigate(['/login']);
   }
 }

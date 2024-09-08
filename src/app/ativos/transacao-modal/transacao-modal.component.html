@@ -19,7 +19,7 @@
     <input matInput type="number" [(ngModel)]="transacaoData.preco" />
   </mat-form-field>
 </div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Cancelar</button>
-  <button mat-button color="primary" (click)="onConfirm()">{{ tipoTransacao | titlecase }}</button>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-stroked-button (click)="onCancel()">Cancelar</button>
+  <button mat-stroked-button color="primary" (click)="onConfirm()">{{ tipoTransacao | titlecase }}</button>
 </div>

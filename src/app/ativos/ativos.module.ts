@@ -13,12 +13,16 @@ import { FormsModule } from '@angular/forms';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { ListaTransacaoComponent } from './lista-transacao/lista-transacao.component';
+import { MatTableModule } from '@angular/material/table';
 
 
 @NgModule({
   declarations: [
     ListaAtivosComponent,
-    TransacaoModalComponent
+    TransacaoModalComponent,
+    ListaTransacaoComponent
   ],
   imports: [
     AtivosRoutingModule,
@@ -30,7 +34,9 @@ import { MatSelectModule } from '@angular/material/select';
     MatInputModule,
     MatSelectModule,
     MatOptionModule,
-    MatDialogModule
+    MatDialogModule,
+    MatButtonModule,
+    MatTableModule
   ],
   
   providers: [AtivosService]

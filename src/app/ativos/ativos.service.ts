@@ -5,6 +5,7 @@ import { environment } from 'src/environments/environments';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { TransacaoRequestModel } from './models/transacao-request.model';
 import { PortfolioResponseModel } from '../portfolio/models/portfolio-response.model';
+import { TransacaoResponseModel } from './models/transacao-response.model';
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +31,10 @@ export class AtivosService {
     return this.http.post(`${environment.apiURL}api/transacao/efetua-venda-ativo`, transacao, { responseType: 'text' }).pipe(
       catchError(this.handleError) // Adiciona o tratamento de erro
     );
+  }
+
+  getTransacoesUsuario(): Observable<TransacaoResponseModel[]> {
+    return this.http.get<TransacaoResponseModel[]>(`${environment.apiURL}api/transacao/retorna-transacoes-usuario`);
   }
 
   // Método para tratar erros
