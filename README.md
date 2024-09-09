@@ -10,13 +10,13 @@ Gestão de Portfólios: Crie e gerencie portfólios, adicione ou remova ativos, 
 Transações de Ativos: Compre e venda ativos diretamente através da interface, com suporte a diferentes tipos de transações.
 Histórico de Transações: Visualize o histórico de todas as transações realizadas pelo usuário, com detalhes de preço e data.
 
-#Pré-requisitos
+# Pré-requisitos
 Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
 
 Node.js (versão 14 ou superior)
 Angular CLI (versão 12 ou superior)
 
-#Instalação
+# Instalação
 
 no cmd cd seu-repositorio/frontend
 npm install
