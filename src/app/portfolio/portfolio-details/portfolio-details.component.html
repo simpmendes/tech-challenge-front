@@ -1,8 +1,11 @@
 <div class="portfolio-detalhes-container">
-    <mat-toolbar>
-      <span>Ativos do Portfólio: {{ portfolio.nome }}</span>
-    </mat-toolbar>
-    <div class="ativos-container">
+  <mat-toolbar>
+    <span>Ativos do Portfólio: {{ portfolio.nome }}</span>
+  </mat-toolbar>
+
+  <div class="ativos-container">
+    <!-- Verifica se há ativos no portfólio -->
+    <ng-container *ngIf="portfolio.ativos.length > 0; else noAtivosMessage">
       <!-- Card para cada ativo do portfólio -->
       <mat-card *ngFor="let ativo of portfolio.ativos" class="ativo-card">
         <mat-card-header>
@@ -13,5 +16,11 @@
           <!-- Exibir outras propriedades do ativo aqui -->
         </mat-card-content>
       </mat-card>
-    </div>
+    </ng-container>
+
+    <!-- Template para exibir a mensagem quando não houver ativos -->
+    <ng-template #noAtivosMessage>
+      <p class="no-ativos-message">Portfólio sem Ativos</p>
+    </ng-template>
+  </div>
 </div>
