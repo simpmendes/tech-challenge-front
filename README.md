@@ -1,27 +1,28 @@
 # TechChallengeFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+Esse projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 16.2.14.
+
+# Descrição
+Este sistema foi desenvolvido para gerenciar portfólios de ativos financeiros, permitindo que os usuários visualizem, comprem e vendam ativos de forma intuitiva. Ele é composto por uma aplicação frontend em Angular e uma API backend em .NET. As principais funcionalidades incluem:
+
+Listagem de Ativos: Visualize todos os ativos disponíveis, incluindo detalhes como nome, sigla e tipo.
+Gestão de Portfólios: Crie e gerencie portfólios, adicione ou remova ativos, e visualize os detalhes dos portfólios.
+Transações de Ativos: Compre e venda ativos diretamente através da interface, com suporte a diferentes tipos de transações.
+Histórico de Transações: Visualize o histórico de todas as transações realizadas pelo usuário, com detalhes de preço e data.
+
+#Pré-requisitos
+Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
+
+Node.js (versão 14 ou superior)
+Angular CLI (versão 12 ou superior)
+
+#Instalação
+
+no cmd cd seu-repositorio/frontend
+npm install
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para rodar digite `ng serve` para o dev server. Navegue para `http://localhost:4200/`. 
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
