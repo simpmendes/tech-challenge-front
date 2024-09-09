@@ -18,7 +18,7 @@ Angular CLI (versão 12 ou superior)
 
 # Instalação
 
-No cmd digite cd seu-repositorio/frontend, depois digite: npm install
+No cmd digite cd `seu-repositorio/frontend`, depois digite: `npm install`
 
 ## Development server
 
